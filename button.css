@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #4fa2a5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label{
+    width: 400px;
+    height: 180px;
+    background-color: rgb(138, 126, 126);
+    display: inline-block;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    transition-delay:.2s ;
+}
+input{
+    display: none;
+}
+label::before{
+    content: '';
+    width: 160px;
+    height: 160px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    margin: 10px;
+    transition: .3s;
+}
+input:checked + label::before{
+    left: 210px;
+}
+input:checked + label{
+    background-color: green;
+}
